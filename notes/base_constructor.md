@@ -1,6 +1,6 @@
 [return](./README.md)
 
-## Invoke base constructor
+## Using base constructors
 
 ```C#
 public class A
