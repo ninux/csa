@@ -17,7 +17,7 @@ public class A
 ```C#
 public class B : A
 {
-	public B(string msg, int ctr) : this(msg)
+	public B(string msg, int ctr) : base(msg)
 	{
 		// ...
 	}
