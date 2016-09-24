@@ -12,3 +12,4 @@ topics. The idea is to use these to
 
 * [using base constructors](./base_constructor.md)
 * [inheritance basics](./inheritance.md)
+* [parameters](./parameters.md)
