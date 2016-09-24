@@ -8,4 +8,6 @@ topics. The idea is to use these to
 * catch their essence in a selfmade minimalistic example
 * discuss the examples with other students
 
+## Topics
+
 * [using base constructors](./base_constructor.md)
