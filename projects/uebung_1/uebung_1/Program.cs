@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Uebung_1
 {
-    class Program
+    class HelloWorld
     {
         #region methods
         /// <summary>
@@ -31,8 +31,8 @@ namespace Uebung_1
 
         static void Main(string[] args)
         {
-            PrintMessage("Huhu", true);
-            PrintMessage("Huhu", false);
+            PrintMessage("Hello World", true);
+            PrintMessage("Hello World", false);
             Console.Read();
         }
     }
