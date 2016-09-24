@@ -5,7 +5,7 @@
 
 ## Invoke base constructor
 
-```
+```C#
 public class A
 {
 	public A(string msg);
