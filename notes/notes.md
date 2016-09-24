@@ -8,9 +8,16 @@
 ```C#
 public class A
 {
-	public A(string msg);
-}
+	public A(string msg)
+	{
+		// ...
+	}
 
+	// ...
+}
+```
+
+```C#
 public class B : A
 {
 	public B(string msg, int ctr) : this(msg)
@@ -19,7 +26,15 @@ public class B : A
 	}
 
 	public B(string msg) : this(msg, 5)
+	{
+		// ...
+	}
 
 	public B() : this("hello", 5)
+	{
+		// ...
+	}
+
+	// ...
 }
 ```
