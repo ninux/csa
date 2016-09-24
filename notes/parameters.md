@@ -74,4 +74,4 @@ list.
 
 A obvious thing is that the parameters modified by `ref` must be
 initialised whereas parameters modified with `out` do not have to be
-initialised (they can be initilised).
+initialised (they can be initialised).
