@@ -3,4 +3,4 @@
 
 ## Links
 
-* [Notes](./notes/notes.md)
+* [Notes](./notes/README.md)
