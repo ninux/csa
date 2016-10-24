@@ -45,7 +45,6 @@ namespace RobotView
             this.Controls.Add(this.pictureBox1);
             this.Name = "SwitchView";
             this.Size = new System.Drawing.Size(20, 40);
-            this.Click += new System.EventHandler(this.SwitchView_Click);
             this.ResumeLayout(false);
 
         }
