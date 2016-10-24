@@ -74,6 +74,10 @@
       <Project>{1997C203-19BD-406F-88FD-C38E5573FD86}</Project>
       <Name>RobotCtrl</Name>
     </ProjectReference>
+    <ProjectReference Include="..\RobotIO\RobotIO\RobotIO.csproj">
+      <Project>{6F9F0048-8A3A-49BF-BE64-DF0CE1ECAE09}</Project>
+      <Name>RobotIO</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ConsoleView.resx">
