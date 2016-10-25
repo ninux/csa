@@ -54,8 +54,13 @@ namespace RobotCtrl
         {
             get { return data; }
             set 
-            { 
-                // Todo 
+            {
+                // Todo
+                if (data != value)
+                {
+                    data = value;
+                    OnDigitalOutputChanged(EventArgs.Empty);
+                }
             }
         }
         #endregion
@@ -83,8 +88,19 @@ namespace RobotCtrl
         /// <returns>den aktuellen Zustand des Bits</returns>
         public virtual bool this[int bit]
         {
-            get { return false; /* ToDo */  }
-            set { /* ToDo */ }
+            /* ToDo */
+            get { return ((Data & (1 << bit)) != 0);  }
+            set {
+                //if (value == true)  /* set bit */
+                //{
+                //    Data = Data | (1 << bit);
+                //}
+                //else /* reset bit */
+                //{
+                //    Data = Data & ~(1 << bit);
+                //}
+                Data = value ? Data | (1 << bit) : Data & ~(1 << bit);
+            }
         }
         #endregion
     }
