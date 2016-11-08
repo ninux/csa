@@ -51,8 +51,14 @@ namespace RobotCtrl
         /// </summary>
         public bool PowerRight
         {
-            get { return false; } // ToDo
-            set { } // ToDo
+            get {
+                // ToDo
+                return ((DriveState & 0x01) == 0x01);
+            }
+            set {
+                // ToDo
+                DriveState = (value) ? DriveState | 0x01 : DriveState & ~0x01;
+            }
         }
 
 
@@ -61,8 +67,16 @@ namespace RobotCtrl
         /// </summary>
         public bool PowerLeft
         {
-            get { return false; } // ToDo
-            set { } // ToDo
+            get
+            {
+                // ToDo
+                return ((DriveState & 0x02) == 0x02);
+            }
+            set
+            {
+                // ToDo
+                DriveState = (value) ? DriveState | 0x02 : DriveState & ~0x02;
+            }
         }
 
 
@@ -71,8 +85,14 @@ namespace RobotCtrl
         /// </summary>
         public int DriveState
         {
-            get { return 0; } // ToDo
-            set { } // ToDo
+            get {
+                // ToDo
+                return IOPort.Read(Constants.IODriveCtrl);
+            }
+            set {
+                // ToDo
+                IOPort.Write(Constants.IODriveCtrl, value);
+            }
         }
         #endregion
 
@@ -85,6 +105,12 @@ namespace RobotCtrl
         public void Reset()
         {
             // ToDo
+            IOPort.Write(Constants.IODriveCtrl, 0x00);
+            Thread.Sleep(5);
+            IOPort.Write(Constants.IODriveCtrl, 0x80);
+            Thread.Sleep(5);
+            IOPort.Write(Constants.IODriveCtrl, 0x00);
+            Thread.Sleep(5);
         }
         #endregion
 

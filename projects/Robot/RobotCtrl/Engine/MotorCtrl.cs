@@ -25,6 +25,9 @@ namespace RobotCtrl
         private const byte UPDATE_FILTER = 0x04;
         private const byte DEFINE_HOME = 0x02;
 
+        // private const int WHEEL_TICKS_PER_TURN = 28672;
+        // private const double WHEEL_DIAMETER = 0.076;
+
         protected const float SAMPLE_PERIOD = 256E-6f;
         protected const float SPEED_SCALE = SAMPLE_PERIOD / Constants.MeterPerTick * (1 << 16);
         protected const float ACCELERATION_SCALE = SAMPLE_PERIOD * SAMPLE_PERIOD / Constants.MeterPerTick * (1 << 16);
@@ -158,7 +161,10 @@ namespace RobotCtrl
         /// </summary>
         public virtual float Distance
         {
-            get { throw new NotImplementedException("ToDo"); }
+            get { // throw new NotImplementedException("ToDo"); 
+                return (float)(Ticks / Constants.TicksPerRevolution * Constants.WheelDiameter * Math.PI);
+                // return (float)(Ticks / WHEEL_TICKS_PER_TURN * WHEEL_DIAMETER * Math.PI);
+            }
         }
 
 
