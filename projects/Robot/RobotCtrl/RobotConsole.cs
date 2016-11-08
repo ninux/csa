@@ -2,7 +2,7 @@
 // C #   I N   A C T I O N   ( C S A )
 //------------------------------------------------------------------------------
 // Repository:
-//    $Id: RobotConsole.cs 1027 2016-10-11 12:15:12Z chj-hslu $
+//    $Id: RobotConsole.cs 1039 2016-10-25 11:56:45Z chj-hslu $
 //------------------------------------------------------------------------------
 using System;
 using System.Linq;
@@ -55,7 +55,7 @@ namespace RobotCtrl
         public void Dispose()
         {
             digitalIn.Dispose();
-            digitalOut.Dispose();
+            //digitalOut.Dispose();
         }
         #endregion
 

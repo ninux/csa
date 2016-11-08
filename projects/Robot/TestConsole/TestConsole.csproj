@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0AB5A5C5-5755-4C47-B862-41383EE58484}</ProjectGuid>
+    <ProjectGuid>{B42796B0-FB02-4B81-8E65-10F0F2283EB0}</ProjectGuid>
     <ProjectTypeGuids>{6AFDAB0D-95EF-424D-8A49-099ECD40B0FF};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -45,12 +45,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConsoleView.cs">
-      <SubType>usercontrol</SubType>
-    </Compile>
-    <Compile Include="ConsoleView.designer.cs">
-      <DependentUpon>ConsoleView.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,9 +53,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ConsoleView.resx">
-      <DependentUpon>ConsoleView.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -77,15 +68,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RobotCtrl\RobotCtrl.csproj">
-      <Project>{1997C203-19BD-406F-88FD-C38E5573FD86}</Project>
+      <Project>{9D9D6040-957C-4041-A842-E50A294B0678}</Project>
       <Name>RobotCtrl</Name>
     </ProjectReference>
-    <ProjectReference Include="..\RobotIO\RobotIO\RobotIO.csproj">
+    <ProjectReference Include="..\RobotIO\RobotIO.csproj">
       <Project>{6F9F0048-8A3A-49BF-BE64-DF0CE1ECAE09}</Project>
       <Name>RobotIO</Name>
     </ProjectReference>
     <ProjectReference Include="..\RobotView\RobotView.csproj">
-      <Project>{01904FCF-E9B1-4AA6-B98C-F76799892B7A}</Project>
+      <Project>{C17A6478-9DDC-4296-A605-351105FD8C73}</Project>
       <Name>RobotView</Name>
     </ProjectReference>
   </ItemGroup>

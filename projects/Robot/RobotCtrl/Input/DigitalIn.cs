@@ -2,7 +2,7 @@
 // C #   I N   A C T I O N   ( C S A )
 //------------------------------------------------------------------------------
 // Repository:
-//    $Id: DigitalIn.cs 1024 2016-10-11 12:06:49Z chj-hslu $
+//    $Id: DigitalIn.cs 1027 2016-10-11 12:15:12Z chj-hslu $
 //------------------------------------------------------------------------------
 using System;
 using System.Linq;
@@ -69,7 +69,6 @@ namespace RobotCtrl
         /// </summary>
         public int Data
         {
-            /* ToDo */
             get { return IOPort.Read(Port); }
         }
         #endregion
@@ -96,13 +95,12 @@ namespace RobotCtrl
         /// <returns>den Zustand des entsprechenden Input-Bits.</returns>
         public virtual bool this[int bit]
         {
-            /* ToDo */
-            get { return ((IOPort.Read(Port) & (1 << bit)) != 0); }
+            get { return (Data & (1 << bit)) != 0; }
         }
 
         /// <summary>
         /// Thread um die Eingänge periodisch abzufragen. Der Roboter kann leider keine Interrupts
-        /// generieren, falls ein Schalter betätigt wird. Somit muss gepollt werden.
+        /// generieren, falls ein Schalter betätigt wird. Somit muss gepollt werden :-(
         /// </summary>
         private void Run()
         {
@@ -111,20 +109,11 @@ namespace RobotCtrl
             run = true;
             while (run)
             {
-                // Todo: Port des Roboters pollen.
-                // Falls eine Änderung detektiert wird, das Event DigitalInChanged feuern.
-
-                if (oldData < 0)
+                newData = Data;
+                if (oldData != newData)
                 {
-                    oldData = IOPort.Read(Port);
-                }
-                else
-                {
-                    newData = IOPort.Read(Port);
-                    if (newData != oldData)
-                    {
-                        OnDigitalInChanged(EventArgs.Empty);
-                    }
+                    OnDigitalInChanged(EventArgs.Empty);
+                    oldData = newData;
                 }
 
                 Thread.Sleep(50);

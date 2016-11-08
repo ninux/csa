@@ -2,7 +2,7 @@
 // C #   I N   A C T I O N   ( C S A )
 //------------------------------------------------------------------------------
 // Repository:
-//    $Id: Switch.cs 1024 2016-10-11 12:06:49Z chj-hslu $
+//    $Id: Switch.cs 1027 2016-10-11 12:15:12Z chj-hslu $
 //------------------------------------------------------------------------------
 using System;
 using System.Linq;
@@ -57,7 +57,7 @@ namespace RobotCtrl
 
         #region properties
         /// <summary>
-        /// Liefert bzw. setzt den Zustand des Schalters beim digitalIn-Objekt (ein-/ausgeschaltet)
+        /// Liefert bzw. setzt den Zustand des Schalters (ein-/ausgeschaltet)
         /// </summary>
         public bool SwitchEnabled
         {

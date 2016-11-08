@@ -27,13 +27,14 @@ namespace RobotView
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SwitchView));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::RobotView.Resource1.SwitchOff;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(20, 40);
@@ -45,7 +46,6 @@ namespace RobotView
             this.Controls.Add(this.pictureBox1);
             this.Name = "SwitchView";
             this.Size = new System.Drawing.Size(20, 40);
-            this.Click += new System.EventHandler(this.SwitchView_Click);
             this.ResumeLayout(false);
 
         }
