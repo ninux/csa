@@ -10,6 +10,20 @@ namespace RobotView
 {
     public partial class SwitchView : UserControl
     {
+
+        private bool State
+        {
+            get
+            {
+                return State;
+            }
+            set
+            {
+                State = value;
+                pictureBox1.Image = (State ? Resource1.SwitchOn : Resource1.SwitchOff);
+            }
+        }
+
         public SwitchView()
         {
             InitializeComponent();

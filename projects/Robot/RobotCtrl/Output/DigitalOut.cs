@@ -8,6 +8,7 @@ using System;
 using System.Linq;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 
 namespace RobotCtrl
 {
@@ -33,6 +34,7 @@ namespace RobotCtrl
         public DigitalOut(int port)
         {
             Port = port;
+            IOPort.Write(Port, 0);
             data = 0;
         }
         #endregion
