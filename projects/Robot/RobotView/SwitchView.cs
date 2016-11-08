@@ -1,4 +1,11 @@
+//------------------------------------------------------------------------------
+// C #   I N   A C T I O N   ( C S A )
+//------------------------------------------------------------------------------
+// Repository:
+//    $Id: SwitchView.cs 1027 2016-10-11 12:15:12Z chj-hslu $
+//------------------------------------------------------------------------------
 using System;
+using System.Linq;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -10,16 +17,22 @@ using RobotCtrl;
 namespace RobotView
 {
     /// <summary>
-    /// Diese Klasse dient zur Visualisierung eines Schalters des Roboters
+    /// Diese Klasse visualisiert einen Schalter des Roboters.
     /// </summary>
     public partial class SwitchView : UserControl
     {
+
         #region members
         private Switch swi;
         private bool state;
         #endregion
 
+
         #region constructor & destructor
+        /// <summary>
+        /// Der Konstruktor initialisiert nur das Control. Erst wenn per Switch-Property ein Schalter
+        /// dieser View zugewiesen wird, funktioniert dieser Schalter und kann den aktuellen Zustand anzeigen.
+        /// </summary>
         public SwitchView()
         {
             InitializeComponent();
@@ -28,27 +41,33 @@ namespace RobotView
         }
         #endregion
 
+
         #region properties
         /// <summary>
-        /// Gibt das Switch-Objekt zurück bzw. setzt es. LedView wird beim Model registriert und mit
-        /// Events über Änderungen informiert.
+        /// Liefert bzw. setzt das Switch-Objekt (Model).
+        /// Die SwitchView registriert sich beim Model und wird so über Änderungen per Event informiert.
         /// </summary>
         public Switch Switch
         {
             get { return swi; }
             set
             {
-                // Falls bereits ein Eventhandler registriert war, diesen zuerst beim alten Switch-Objekt entfernen
+                // Falls bereits ein Eventhandler registriert war => diesen zuerst beim alten Led-Objekt entfernen
                 if (swi != null) swi.SwitchStateChanged -= SwitchStateChanged;
 
-                // Handler beim Switch-Objekt (Model) registrieren
+                // Handler beim Led-Objekt (Model) registrieren.
                 swi = value;
-                if (swi != null) this.swi.SwitchStateChanged += SwitchStateChanged;
+                if (swi != null)
+                {
+                    this.swi.SwitchStateChanged += SwitchStateChanged;
+                    State = swi.SwitchEnabled;
+                }
             }
         }
 
+
         /// <summary>
-        /// Setzt den Zustand des Schalters (true => ein, false => aus)
+        /// Liefert bzw. setzt den Zustand des Schalters (true => ein, false => aus)
         /// </summary>
         public bool State
         {
@@ -56,15 +75,16 @@ namespace RobotView
             set
             {
                 state = value;
-                pictureBox1.Image = (value ? Resource1.SwitchOn : Resource1.SwitchOff);
+                pictureBox1.Image = (value ? Resource.SwitchOn : Resource.SwitchOff);
             }
         }
         #endregion
 
+
         #region methods
         /// <summary>
-        /// Der Eventhandler wird aufgerufen, wenn sich der Zustand des Schalters verändert hat.
-        /// So kann die View den aktuellen Zustand anzeigen.
+        /// Diese Methode wir aufgerufen, wenn sich im Model der Zustand des Schalters verändert. Somit
+        /// kann die View den aktuellen Zustand darstellen.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -73,6 +93,10 @@ namespace RobotView
             if (InvokeRequired)
             {
                 Invoke(new EventHandler<SwitchEventArgs>(SwitchStateChanged), sender, e);
+            }
+            else
+            {
+                State = e.SwitchEnabled;
             }
         }
         #endregion

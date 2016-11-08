@@ -30,34 +30,63 @@ namespace TestConsole
         /// </summary>
         private void InitializeComponent()
         {
+            this.button1 = new System.Windows.Forms.Button();
+            this.timer = new System.Windows.Forms.Timer();
+            this.consoleView2 = new RobotView.ConsoleView();
             this.consoleView1 = new RobotView.ConsoleView();
             this.SuspendLayout();
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(27, 195);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(72, 20);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Start";
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // timer
+            // 
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // consoleView2
+            // 
+            this.consoleView2.BackColor = System.Drawing.Color.Black;
+            this.consoleView2.Location = new System.Drawing.Point(27, 116);
+            this.consoleView2.Name = "consoleView2";
+            this.consoleView2.RobotConsole = null;
+            this.consoleView2.Size = new System.Drawing.Size(208, 46);
+            this.consoleView2.TabIndex = 1;
+            // 
             // consoleView1
             // 
-            this.consoleView1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.consoleView1.Location = new System.Drawing.Point(102, 66);
+            this.consoleView1.BackColor = System.Drawing.Color.Black;
+            this.consoleView1.Location = new System.Drawing.Point(27, 22);
             this.consoleView1.Name = "consoleView1";
-            this.consoleView1.Size = new System.Drawing.Size(105, 94);
+            this.consoleView1.RobotConsole = null;
+            this.consoleView1.Size = new System.Drawing.Size(208, 46);
             this.consoleView1.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(314, 219);
+            this.ClientSize = new System.Drawing.Size(363, 227);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.consoleView2);
             this.Controls.Add(this.consoleView1);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }
 
-        private RobotView.ConsoleView consoleView1;
-
+        private ConsoleView consoleView1;
         #endregion
+
+        private ConsoleView consoleView2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Timer timer;
     }
 }
 

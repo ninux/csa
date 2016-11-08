@@ -1,4 +1,11 @@
+//------------------------------------------------------------------------------
+// C #   I N   A C T I O N   ( C S A )
+//------------------------------------------------------------------------------
+// Repository:
+//    $Id: LedView.cs 1039 2016-10-25 11:56:45Z chj-hslu $
+//------------------------------------------------------------------------------
 using System;
+using System.Linq;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -9,47 +16,52 @@ using RobotCtrl;
 
 namespace RobotView
 {
-    /// <summary>
-    /// Diese Klasse dient zur Visualisierung einer LED des Roboters
-    /// </summary>
 
+    /// <summary>
+    /// Diese Klasse visualisiert eine LED des Roboters
+    /// </summary>
     public partial class LedView : UserControl
     {
+
         #region members
         private Led led;
         private bool state;
         #endregion
 
+
         #region constructor & destructor
+        /// <summary>
+        /// Der Konstruktor initialisiert nur das Control. Erst wenn per Led-Property eine Led dieser 
+        /// View zugewiesen wird, funktioniert diese Led und kann den aktuellen Zustand anzeigen.
+        /// </summary>
         public LedView()
         {
             InitializeComponent();
-
             State = false;
         }
         #endregion
 
         #region properties
         /// <summary>
-        /// Gibt das LED-Objekt zurück bzw. setzt es. LedView wird beim Model registriert und mit
-        /// Events über Änderungen informiert.
+        /// Liefert bzw. setzt das LED-Objekt (Model).
+        /// Die LedView registriert sich beim Model und wird über Änderungen per Event informiert.
         /// </summary>
         public Led Led
         {
             get { return led; }
             set
             {
-                // Falls bereits ein Eventhandler registriert war, diesen zuerst beim alten Led-Objekt entfernen
+                // Falls bereits ein Eventhandler registriert war => diesen zuerst beim alten Led-Objekt entfernen
                 if (led != null) led.LedStateChanged -= LedStateChanged;
 
-                // Handler beim Led-Objekt (Model) registrieren
+                // Handler beim Led-Objekt (Model) registrieren.
                 led = value;
                 if (led != null) this.led.LedStateChanged += LedStateChanged;
             }
         }
 
         /// <summary>
-        /// Setzt den Zustand der LED (true => ein, false => aus)
+        /// Liefert bzw. setzt den Zustand der LED (true => ein, false => aus)
         /// </summary>
         public bool State
         {
@@ -57,31 +69,31 @@ namespace RobotView
             set
             {
                 state = value;
-                pictureBox1.Image = (value ? Resource1.LedOn : Resource1.LedOff);
+                pictureBox1.Image = (value ? Resource.LedOn : Resource.LedOff);
             }
         }
         #endregion
 
+
         #region methods
         /// <summary>
-        /// Der Eventhandler wird aufgerufen, wenn sich der Zustand der LED (Model) verändert hat.
-        /// So kann die View den aktuellen Zustand anzeigen.
+        /// Dieser Eventhandler wird aufgerufen, wenn sich der Zustand der LED (Model) verändert hat. Somit
+        /// kann die View den aktuellen Zustand anzeigen.
         /// </summary>
+        /// 
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void LedStateChanged(object sender, LedEventArgs e)
         {
+
             if (InvokeRequired)
             {
                 Invoke(new EventHandler<LedEventArgs>(LedStateChanged), sender, e);
             }
-            else
-            {
-                State = e.LedEnabled;
-            }
+            else State = e.LedEnabled;
+            //State = led.LedEnabled;
         }
         #endregion
-
 
     }
 }
