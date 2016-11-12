@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestRadar", "TestRadar\Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDrive", "TestDrive\TestDrive.csproj", "{D65363C0-2416-41AC-BFBA-41026C756DB8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testat", "Testat\Testat.csproj", "{AB7120D6-0FB8-4C2D-880C-720B15540539}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testat", "Testat\Testat.csproj", "{46939F8C-D31F-44A3-9D61-0B472E8ED214}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -67,12 +67,10 @@ Global
 		{D65363C0-2416-41AC-BFBA-41026C756DB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D65363C0-2416-41AC-BFBA-41026C756DB8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D65363C0-2416-41AC-BFBA-41026C756DB8}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{AB7120D6-0FB8-4C2D-880C-720B15540539}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AB7120D6-0FB8-4C2D-880C-720B15540539}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AB7120D6-0FB8-4C2D-880C-720B15540539}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{AB7120D6-0FB8-4C2D-880C-720B15540539}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AB7120D6-0FB8-4C2D-880C-720B15540539}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AB7120D6-0FB8-4C2D-880C-720B15540539}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{46939F8C-D31F-44A3-9D61-0B472E8ED214}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46939F8C-D31F-44A3-9D61-0B472E8ED214}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46939F8C-D31F-44A3-9D61-0B472E8ED214}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46939F8C-D31F-44A3-9D61-0B472E8ED214}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
