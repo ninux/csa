@@ -172,6 +172,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Resources\LedOff.bmp" />
   </ItemGroup>
   <ItemGroup>
