@@ -61,6 +61,7 @@ namespace RobotView
             this.btn_nk_zero.Size = new System.Drawing.Size(112, 55);
             this.btn_nk_zero.TabIndex = 10;
             this.btn_nk_zero.Text = "0";
+            this.btn_nk_zero.Click += new System.EventHandler(this.btn_nk_zero_Click);
             // 
             // btn_nk_one
             // 
@@ -70,6 +71,7 @@ namespace RobotView
             this.btn_nk_one.Size = new System.Drawing.Size(53, 55);
             this.btn_nk_one.TabIndex = 6;
             this.btn_nk_one.Text = "1";
+            this.btn_nk_one.Click += new System.EventHandler(this.btn_nk_one_Click);
             // 
             // btn_nk_two
             // 
@@ -79,6 +81,7 @@ namespace RobotView
             this.btn_nk_two.Size = new System.Drawing.Size(53, 55);
             this.btn_nk_two.TabIndex = 7;
             this.btn_nk_two.Text = "2";
+            this.btn_nk_two.Click += new System.EventHandler(this.btn_nk_two_Click);
             // 
             // btn_nk_three
             // 
@@ -88,6 +91,7 @@ namespace RobotView
             this.btn_nk_three.Size = new System.Drawing.Size(53, 55);
             this.btn_nk_three.TabIndex = 8;
             this.btn_nk_three.Text = "3";
+            this.btn_nk_three.Click += new System.EventHandler(this.btn_nk_three_Click);
             // 
             // btn_nk_four
             // 
@@ -97,6 +101,7 @@ namespace RobotView
             this.btn_nk_four.Size = new System.Drawing.Size(53, 55);
             this.btn_nk_four.TabIndex = 3;
             this.btn_nk_four.Text = "4";
+            this.btn_nk_four.Click += new System.EventHandler(this.btn_nk_four_Click);
             // 
             // btn_nk_five
             // 
@@ -106,6 +111,7 @@ namespace RobotView
             this.btn_nk_five.Size = new System.Drawing.Size(53, 55);
             this.btn_nk_five.TabIndex = 4;
             this.btn_nk_five.Text = "5";
+            this.btn_nk_five.Click += new System.EventHandler(this.btn_nk_five_Click);
             // 
             // btn_nk_six
             // 
@@ -115,6 +121,7 @@ namespace RobotView
             this.btn_nk_six.Size = new System.Drawing.Size(53, 55);
             this.btn_nk_six.TabIndex = 5;
             this.btn_nk_six.Text = "6";
+            this.btn_nk_six.Click += new System.EventHandler(this.btn_nk_six_Click);
             // 
             // btn_nk_seven
             // 
@@ -124,6 +131,7 @@ namespace RobotView
             this.btn_nk_seven.Size = new System.Drawing.Size(53, 55);
             this.btn_nk_seven.TabIndex = 0;
             this.btn_nk_seven.Text = "7";
+            this.btn_nk_seven.Click += new System.EventHandler(this.btn_nk_seven_Click);
             // 
             // btn_nk_eight
             // 
@@ -133,6 +141,7 @@ namespace RobotView
             this.btn_nk_eight.Size = new System.Drawing.Size(53, 55);
             this.btn_nk_eight.TabIndex = 1;
             this.btn_nk_eight.Text = "8";
+            this.btn_nk_eight.Click += new System.EventHandler(this.btn_nk_eight_Click);
             // 
             // btn_nk_nine
             // 
@@ -142,6 +151,7 @@ namespace RobotView
             this.btn_nk_nine.Size = new System.Drawing.Size(53, 55);
             this.btn_nk_nine.TabIndex = 2;
             this.btn_nk_nine.Text = "9";
+            this.btn_nk_nine.Click += new System.EventHandler(this.btn_nk_nine_Click);
             // 
             // btn_nk_dot
             // 
@@ -151,6 +161,7 @@ namespace RobotView
             this.btn_nk_dot.Size = new System.Drawing.Size(53, 55);
             this.btn_nk_dot.TabIndex = 9;
             this.btn_nk_dot.Text = ".";
+            this.btn_nk_dot.Click += new System.EventHandler(this.btn_nk_dot_Click);
             // 
             // btn_nk_add_one
             // 
@@ -159,6 +170,7 @@ namespace RobotView
             this.btn_nk_add_one.Size = new System.Drawing.Size(53, 55);
             this.btn_nk_add_one.TabIndex = 13;
             this.btn_nk_add_one.Text = "+1";
+            this.btn_nk_add_one.Click += new System.EventHandler(this.btn_nk_add_one_Click);
             // 
             // btn_nk_add_ten
             // 
@@ -167,6 +179,7 @@ namespace RobotView
             this.btn_nk_add_ten.Size = new System.Drawing.Size(53, 55);
             this.btn_nk_add_ten.TabIndex = 14;
             this.btn_nk_add_ten.Text = "+10";
+            this.btn_nk_add_ten.Click += new System.EventHandler(this.btn_nk_add_ten_Click);
             // 
             // btn_nk_add_hundred
             // 
@@ -175,6 +188,7 @@ namespace RobotView
             this.btn_nk_add_hundred.Size = new System.Drawing.Size(53, 55);
             this.btn_nk_add_hundred.TabIndex = 15;
             this.btn_nk_add_hundred.Text = "+100";
+            this.btn_nk_add_hundred.Click += new System.EventHandler(this.btn_nk_add_hundred_Click);
             // 
             // btn_nk_sub_one
             // 
@@ -183,6 +197,7 @@ namespace RobotView
             this.btn_nk_sub_one.Size = new System.Drawing.Size(53, 55);
             this.btn_nk_sub_one.TabIndex = 16;
             this.btn_nk_sub_one.Text = "-1";
+            this.btn_nk_sub_one.Click += new System.EventHandler(this.btn_nk_sub_one_Click);
             // 
             // btn_nk_sub_ten
             // 
@@ -191,6 +206,7 @@ namespace RobotView
             this.btn_nk_sub_ten.Size = new System.Drawing.Size(53, 55);
             this.btn_nk_sub_ten.TabIndex = 17;
             this.btn_nk_sub_ten.Text = "-10";
+            this.btn_nk_sub_ten.Click += new System.EventHandler(this.btn_nk_sub_ten_Click);
             // 
             // btn_nk_sub_hundred
             // 
@@ -199,6 +215,7 @@ namespace RobotView
             this.btn_nk_sub_hundred.Size = new System.Drawing.Size(53, 55);
             this.btn_nk_sub_hundred.TabIndex = 18;
             this.btn_nk_sub_hundred.Text = "-100";
+            this.btn_nk_sub_hundred.Click += new System.EventHandler(this.btn_nk_sub_hundred_Click);
             // 
             // btn_nk_return
             // 
@@ -207,6 +224,7 @@ namespace RobotView
             this.btn_nk_return.Size = new System.Drawing.Size(53, 55);
             this.btn_nk_return.TabIndex = 11;
             this.btn_nk_return.Text = "Return";
+            this.btn_nk_return.Click += new System.EventHandler(this.btn_nk_return_Click);
             // 
             // btn_nk_clear
             // 
@@ -215,6 +233,7 @@ namespace RobotView
             this.btn_nk_clear.Size = new System.Drawing.Size(53, 55);
             this.btn_nk_clear.TabIndex = 12;
             this.btn_nk_clear.Text = "Clear";
+            this.btn_nk_clear.Click += new System.EventHandler(this.btn_nk_clear_Click);
             // 
             // btn_nk_negate
             // 
@@ -223,6 +242,7 @@ namespace RobotView
             this.btn_nk_negate.Size = new System.Drawing.Size(53, 55);
             this.btn_nk_negate.TabIndex = 21;
             this.btn_nk_negate.Text = "+/-";
+            this.btn_nk_negate.Click += new System.EventHandler(this.btn_nk_negate_Click);
             // 
             // btn_nk_cancel
             // 
@@ -231,6 +251,7 @@ namespace RobotView
             this.btn_nk_cancel.Size = new System.Drawing.Size(53, 55);
             this.btn_nk_cancel.TabIndex = 19;
             this.btn_nk_cancel.Text = "Cancel";
+            this.btn_nk_cancel.Click += new System.EventHandler(this.btn_nk_cancel_Click);
             // 
             // btn_nk_ok
             // 
@@ -239,6 +260,7 @@ namespace RobotView
             this.btn_nk_ok.Size = new System.Drawing.Size(53, 55);
             this.btn_nk_ok.TabIndex = 20;
             this.btn_nk_ok.Text = "OK";
+            this.btn_nk_ok.Click += new System.EventHandler(this.btn_nk_ok_Click);
             // 
             // btn_nk_help
             // 
@@ -247,6 +269,7 @@ namespace RobotView
             this.btn_nk_help.Size = new System.Drawing.Size(53, 55);
             this.btn_nk_help.TabIndex = 22;
             this.btn_nk_help.Text = "Help";
+            this.btn_nk_help.Click += new System.EventHandler(this.btn_nk_help_Click);
             // 
             // tb_nk_number
             // 

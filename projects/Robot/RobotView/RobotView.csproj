@@ -73,6 +73,7 @@
     <Compile Include="LedView.designer.cs">
       <DependentUpon>LedView.cs</DependentUpon>
     </Compile>
+    <Compile Include="MicroCPU.cs" />
     <Compile Include="MotorCtrlView.cs">
       <SubType>usercontrol</SubType>
     </Compile>
