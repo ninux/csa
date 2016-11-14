@@ -101,7 +101,7 @@ namespace TestDrive
             this.runTurn1.Acceleration = 0F;
             this.runTurn1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.runTurn1.Drive = null;
-            this.runTurn1.Location = new System.Drawing.Point(350, 120);
+            this.runTurn1.Location = new System.Drawing.Point(350, 145);
             this.runTurn1.Name = "runTurn1";
             this.runTurn1.Size = new System.Drawing.Size(351, 84);
             this.runTurn1.Speed = 0F;
@@ -112,9 +112,9 @@ namespace TestDrive
             this.runArc1.Acceleration = 0F;
             this.runArc1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.runArc1.Drive = null;
-            this.runArc1.Location = new System.Drawing.Point(350, 150);
+            this.runArc1.Location = new System.Drawing.Point(350, 237);
             this.runArc1.Name = "runArc1";
-            this.runArc1.Size = new System.Drawing.Size(351, 84);
+            this.runArc1.Size = new System.Drawing.Size(351, 94);
             this.runArc1.Speed = 0F;
             this.runArc1.TabIndex = 7;
             // 
@@ -130,6 +130,8 @@ namespace TestDrive
             this.Controls.Add(this.consoleView1);
             this.Controls.Add(this.commonRunParameters1);
             this.Controls.Add(this.runLine1);
+            this.Controls.Add(this.runTurn1);
+            this.Controls.Add(this.runArc1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

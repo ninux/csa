@@ -79,6 +79,12 @@
     <Compile Include="MotorCtrlView.designer.cs">
       <DependentUpon>MotorCtrlView.cs</DependentUpon>
     </Compile>
+    <Compile Include="NumericKeyboard.cs">
+      <SubType>usercontrol</SubType>
+    </Compile>
+    <Compile Include="NumericKeyboard.designer.cs">
+      <DependentUpon>NumericKeyboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="RadarView.cs">
       <SubType>usercontrol</SubType>
     </Compile>
@@ -141,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MotorCtrlView.resx">
       <DependentUpon>MotorCtrlView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumericKeyboard.resx">
+      <DependentUpon>NumericKeyboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RadarView.resx">
       <DependentUpon>RadarView.cs</DependentUpon>
