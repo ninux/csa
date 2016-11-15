@@ -58,19 +58,21 @@ namespace RobotView
 
         private void btn_radius_edit_Click(object sender, EventArgs e)
         {
-            NumericKeyboard nk = new NumericKeyboard();
+            NumericKeyboard nk = new NumericKeyboard(
+                Int32.Parse(upDownArcRadius.Text));
             if (nk.ShowDialog() == DialogResult.OK)
             {
-               // ???
+                upDownArcRadius.Text = nk.Number.ToString();
             }
         }
 
         private void btn_angle_edit_Click(object sender, EventArgs e)
         {
-            NumericKeyboard nk = new NumericKeyboard();
+            NumericKeyboard nk = new NumericKeyboard(
+                Int32.Parse(upDownArcAngle.Text));
             if (nk.ShowDialog() == DialogResult.OK)
             {
-                // ???
+                upDownArcAngle.Text = nk.Number.ToString();
             }
         }
     }
