@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestRadar", "TestRadar\Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDrive", "TestDrive\TestDrive.csproj", "{D65363C0-2416-41AC-BFBA-41026C756DB8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testat", "Testat\Testat.csproj", "{46939F8C-D31F-44A3-9D61-0B472E8ED214}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testat_Windows", "Testat_Windows\Testat_Windows.csproj", "{46939F8C-D31F-44A3-9D61-0B472E8ED214}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
