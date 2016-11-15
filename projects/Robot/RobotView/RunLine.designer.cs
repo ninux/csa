@@ -32,6 +32,7 @@ namespace RobotView
             this.upDownLineLength = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.btn_length_edit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonLineStart
@@ -45,7 +46,7 @@ namespace RobotView
             // 
             // buttonLineNeg
             // 
-            this.buttonLineNeg.Location = new System.Drawing.Point(174, 15);
+            this.buttonLineNeg.Location = new System.Drawing.Point(132, 15);
             this.buttonLineNeg.Name = "buttonLineNeg";
             this.buttonLineNeg.Size = new System.Drawing.Size(35, 24);
             this.buttonLineNeg.TabIndex = 19;
@@ -59,7 +60,7 @@ namespace RobotView
             0,
             0,
             0});
-            this.upDownLineLength.Location = new System.Drawing.Point(215, 15);
+            this.upDownLineLength.Location = new System.Drawing.Point(173, 15);
             this.upDownLineLength.Maximum = new decimal(new int[] {
             50000,
             0,
@@ -95,10 +96,20 @@ namespace RobotView
             this.label8.Size = new System.Drawing.Size(114, 20);
             this.label8.Text = "Length (+/- mm)";
             // 
+            // btn_length_edit
+            // 
+            this.btn_length_edit.Location = new System.Drawing.Point(254, 15);
+            this.btn_length_edit.Name = "btn_length_edit";
+            this.btn_length_edit.Size = new System.Drawing.Size(36, 24);
+            this.btn_length_edit.TabIndex = 33;
+            this.btn_length_edit.Text = "Edit";
+            this.btn_length_edit.Click += new System.EventHandler(this.btn_length_edit_Click);
+            // 
             // RunLine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.Controls.Add(this.btn_length_edit);
             this.Controls.Add(this.buttonLineStart);
             this.Controls.Add(this.buttonLineNeg);
             this.Controls.Add(this.upDownLineLength);
@@ -117,5 +128,6 @@ namespace RobotView
         private System.Windows.Forms.NumericUpDown upDownLineLength;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btn_length_edit;
     }
 }

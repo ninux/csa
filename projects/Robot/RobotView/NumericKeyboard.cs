@@ -8,7 +8,8 @@ using System.Windows.Forms;
 
 namespace RobotView
 {
-    public partial class NumericKeyboard : UserControl
+    // public partial class NumericKeyboard : UserControl
+    public partial class NumericKeyboard : Form
     {
         #region members
         MicroCPU cpu;
@@ -24,11 +25,15 @@ namespace RobotView
         public NumericKeyboard(int initial)
         {
             InitializeComponent();
-
+            cpu = new MicroCPU();
         }
         #endregion
 
         #region properties
+        public int Number
+        {
+            get { return cpu.Result; }
+        }
         #endregion
 
         #region methods
@@ -223,7 +228,7 @@ namespace RobotView
         {
             int tmp = Int32.Parse(tb_nk_number.Text);
             tmp *= -1;
-            tb_nk_number.Text(tmp.ToString());
+            tb_nk_number.Text = tmp.ToString();
         }
 
         private void btn_nk_cancel_Click(object sender, EventArgs e)

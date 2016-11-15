@@ -1,3 +1,5 @@
+using System.Windows.Forms;
+
 namespace RobotView
 {
     partial class NumericKeyboard
@@ -246,6 +248,7 @@ namespace RobotView
             // 
             // btn_nk_cancel
             // 
+            this.btn_nk_cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_nk_cancel.Location = new System.Drawing.Point(239, 215);
             this.btn_nk_cancel.Name = "btn_nk_cancel";
             this.btn_nk_cancel.Size = new System.Drawing.Size(53, 55);
@@ -255,6 +258,7 @@ namespace RobotView
             // 
             // btn_nk_ok
             // 
+            this.btn_nk_ok.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btn_nk_ok.Location = new System.Drawing.Point(298, 215);
             this.btn_nk_ok.Name = "btn_nk_ok";
             this.btn_nk_ok.Size = new System.Drawing.Size(53, 55);

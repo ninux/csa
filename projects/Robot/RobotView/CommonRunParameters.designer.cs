@@ -32,6 +32,8 @@ namespace RobotView
             this.upDownSpeed = new System.Windows.Forms.NumericUpDown();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.btn_speed_edit = new System.Windows.Forms.Button();
+            this.btn_acceleration_edit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label16
@@ -49,7 +51,7 @@ namespace RobotView
             0,
             0,
             0});
-            this.upDownAcceleration.Location = new System.Drawing.Point(215, 50);
+            this.upDownAcceleration.Location = new System.Drawing.Point(181, 50);
             this.upDownAcceleration.Maximum = new decimal(new int[] {
             5000,
             0,
@@ -71,7 +73,7 @@ namespace RobotView
             0,
             0,
             0});
-            this.upDownSpeed.Location = new System.Drawing.Point(215, 20);
+            this.upDownSpeed.Location = new System.Drawing.Point(181, 20);
             this.upDownSpeed.Maximum = new decimal(new int[] {
             8000,
             0,
@@ -85,6 +87,7 @@ namespace RobotView
             0,
             0,
             0});
+            this.upDownSpeed.ValueChanged += new System.EventHandler(this.upDownSpeed_ValueChanged);
             // 
             // label19
             // 
@@ -102,10 +105,30 @@ namespace RobotView
             this.label18.Size = new System.Drawing.Size(172, 20);
             this.label18.Text = "Speed (+ mm/s)";
             // 
+            // btn_speed_edit
+            // 
+            this.btn_speed_edit.Location = new System.Drawing.Point(262, 20);
+            this.btn_speed_edit.Name = "btn_speed_edit";
+            this.btn_speed_edit.Size = new System.Drawing.Size(36, 24);
+            this.btn_speed_edit.TabIndex = 24;
+            this.btn_speed_edit.Text = "Edit";
+            this.btn_speed_edit.Click += new System.EventHandler(this.btn_speed_edit_Click);
+            // 
+            // btn_acceleration_edit
+            // 
+            this.btn_acceleration_edit.Location = new System.Drawing.Point(262, 50);
+            this.btn_acceleration_edit.Name = "btn_acceleration_edit";
+            this.btn_acceleration_edit.Size = new System.Drawing.Size(36, 24);
+            this.btn_acceleration_edit.TabIndex = 25;
+            this.btn_acceleration_edit.Text = "Edit";
+            this.btn_acceleration_edit.Click += new System.EventHandler(this.btn_acceleration_edit_Click);
+            // 
             // CommonRunParameters
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.Controls.Add(this.btn_acceleration_edit);
+            this.Controls.Add(this.btn_speed_edit);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.upDownAcceleration);
             this.Controls.Add(this.upDownSpeed);
@@ -124,5 +147,7 @@ namespace RobotView
         private System.Windows.Forms.NumericUpDown upDownSpeed;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Button btn_speed_edit;
+        private System.Windows.Forms.Button btn_acceleration_edit;
     }
 }

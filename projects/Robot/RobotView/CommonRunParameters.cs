@@ -100,6 +100,29 @@ namespace RobotView
             add { upDownAcceleration.ValueChanged += value; }
             remove { upDownAcceleration.ValueChanged -= value; }
         }
+
+        private void upDownSpeed_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_speed_edit_Click(object sender, EventArgs e)
+        {
+            NumericKeyboard nk = new NumericKeyboard((int)Speed);
+            if (nk.ShowDialog() == DialogResult.OK)
+            {
+                Speed = nk.Number;
+            }
+        }
+
+        private void btn_acceleration_edit_Click(object sender, EventArgs e)
+        {
+            NumericKeyboard nk = new NumericKeyboard((int)Acceleration);
+            if (nk.ShowDialog() == DialogResult.OK)
+            {
+                Acceleration = nk.Number;
+            }
+        }
         #endregion
 
 #endif

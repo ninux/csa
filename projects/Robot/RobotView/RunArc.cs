@@ -55,5 +55,23 @@ namespace RobotView
             buttonStartArc_Click(null, EventArgs.Empty);
         }
         #endregion
+
+        private void btn_radius_edit_Click(object sender, EventArgs e)
+        {
+            NumericKeyboard nk = new NumericKeyboard();
+            if (nk.ShowDialog() == DialogResult.OK)
+            {
+               // ???
+            }
+        }
+
+        private void btn_angle_edit_Click(object sender, EventArgs e)
+        {
+            NumericKeyboard nk = new NumericKeyboard();
+            if (nk.ShowDialog() == DialogResult.OK)
+            {
+                // ???
+            }
+        }
     }
 }

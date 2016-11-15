@@ -81,7 +81,7 @@
       <DependentUpon>MotorCtrlView.cs</DependentUpon>
     </Compile>
     <Compile Include="NumericKeyboard.cs">
-      <SubType>usercontrol</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="NumericKeyboard.designer.cs">
       <DependentUpon>NumericKeyboard.cs</DependentUpon>

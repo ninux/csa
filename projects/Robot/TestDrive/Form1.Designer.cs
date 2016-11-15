@@ -83,6 +83,7 @@ namespace TestDrive
             this.commonRunParameters1.Size = new System.Drawing.Size(351, 84);
             this.commonRunParameters1.Speed = 0.5F;
             this.commonRunParameters1.TabIndex = 4;
+            this.commonRunParameters1.Click += new System.EventHandler(this.commonRunParameters1_Click);
             // 
             // runLine1
             // 

@@ -36,11 +36,13 @@ namespace RobotView
             this.label5 = new System.Windows.Forms.Label();
             this.upDownArcRadius = new System.Windows.Forms.NumericUpDown();
             this.buttonStartArc = new System.Windows.Forms.Button();
+            this.btn_radius_edit = new System.Windows.Forms.Button();
+            this.btn_angle_edit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonArcNeg
             // 
-            this.buttonArcNeg.Location = new System.Drawing.Point(174, 62);
+            this.buttonArcNeg.Location = new System.Drawing.Point(140, 62);
             this.buttonArcNeg.Name = "buttonArcNeg";
             this.buttonArcNeg.Size = new System.Drawing.Size(35, 24);
             this.buttonArcNeg.TabIndex = 24;
@@ -52,7 +54,7 @@ namespace RobotView
             this.label1.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(182, 20);
+            this.label1.Size = new System.Drawing.Size(134, 20);
             this.label1.Text = "RunArc";
             // 
             // label2
@@ -65,7 +67,7 @@ namespace RobotView
             // 
             // radioButtonArcRight
             // 
-            this.radioButtonArcRight.Location = new System.Drawing.Point(272, 4);
+            this.radioButtonArcRight.Location = new System.Drawing.Point(197, 4);
             this.radioButtonArcRight.Name = "radioButtonArcRight";
             this.radioButtonArcRight.Size = new System.Drawing.Size(61, 20);
             this.radioButtonArcRight.TabIndex = 29;
@@ -79,7 +81,7 @@ namespace RobotView
             0,
             0,
             0});
-            this.upDownArcAngle.Location = new System.Drawing.Point(215, 62);
+            this.upDownArcAngle.Location = new System.Drawing.Point(181, 63);
             this.upDownArcAngle.Maximum = new decimal(new int[] {
             360,
             0,
@@ -102,7 +104,7 @@ namespace RobotView
             // arcLeftRadioButton
             // 
             this.arcLeftRadioButton.Checked = true;
-            this.arcLeftRadioButton.Location = new System.Drawing.Point(215, 4);
+            this.arcLeftRadioButton.Location = new System.Drawing.Point(140, 4);
             this.arcLeftRadioButton.Name = "arcLeftRadioButton";
             this.arcLeftRadioButton.Size = new System.Drawing.Size(51, 20);
             this.arcLeftRadioButton.TabIndex = 30;
@@ -123,7 +125,7 @@ namespace RobotView
             0,
             0,
             0});
-            this.upDownArcRadius.Location = new System.Drawing.Point(215, 30);
+            this.upDownArcRadius.Location = new System.Drawing.Point(181, 30);
             this.upDownArcRadius.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -140,17 +142,38 @@ namespace RobotView
             // 
             // buttonStartArc
             // 
-            this.buttonStartArc.Location = new System.Drawing.Point(296, 62);
+            this.buttonStartArc.Location = new System.Drawing.Point(304, 30);
             this.buttonStartArc.Name = "buttonStartArc";
-            this.buttonStartArc.Size = new System.Drawing.Size(51, 24);
+            this.buttonStartArc.Size = new System.Drawing.Size(43, 56);
             this.buttonStartArc.TabIndex = 23;
             this.buttonStartArc.Text = "Start";
             this.buttonStartArc.Click += new System.EventHandler(this.buttonStartArc_Click);
+            // 
+            // btn_radius_edit
+            // 
+            this.btn_radius_edit.Location = new System.Drawing.Point(262, 30);
+            this.btn_radius_edit.Name = "btn_radius_edit";
+            this.btn_radius_edit.Size = new System.Drawing.Size(36, 24);
+            this.btn_radius_edit.TabIndex = 32;
+            this.btn_radius_edit.Text = "Edit";
+            this.btn_radius_edit.Click += new System.EventHandler(this.btn_radius_edit_Click);
+            // 
+            // btn_angle_edit
+            // 
+            this.btn_angle_edit.Location = new System.Drawing.Point(262, 62);
+            this.btn_angle_edit.Name = "btn_angle_edit";
+            this.btn_angle_edit.Size = new System.Drawing.Size(36, 24);
+            this.btn_angle_edit.TabIndex = 33;
+            this.btn_angle_edit.Text = "Edit";
+            this.btn_angle_edit.Click += new System.EventHandler(this.btn_angle_edit_Click);
+
             // 
             // RunArc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.Controls.Add(this.btn_angle_edit);
+            this.Controls.Add(this.btn_radius_edit);
             this.Controls.Add(this.buttonArcNeg);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
@@ -177,5 +200,7 @@ namespace RobotView
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.NumericUpDown upDownArcRadius;
         private System.Windows.Forms.Button buttonStartArc;
+        private System.Windows.Forms.Button btn_radius_edit;
+        private System.Windows.Forms.Button btn_angle_edit;
     }
 }
