@@ -286,6 +286,7 @@ namespace RobotView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(357, 278);
             this.Controls.Add(this.btn_nk_zero);
             this.Controls.Add(this.btn_nk_one);
             this.Controls.Add(this.btn_nk_two);
@@ -311,7 +312,6 @@ namespace RobotView
             this.Controls.Add(this.btn_nk_help);
             this.Controls.Add(this.tb_nk_number);
             this.Name = "NumericKeyboard";
-            this.Size = new System.Drawing.Size(361, 278);
             this.ResumeLayout(false);
 
         }

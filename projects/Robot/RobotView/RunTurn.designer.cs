@@ -32,6 +32,7 @@ namespace RobotView
             this.upDownTurnAngle = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.btn_length_edit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonTurnStart
@@ -45,7 +46,7 @@ namespace RobotView
             // 
             // buttonTurnNeg
             // 
-            this.buttonTurnNeg.Location = new System.Drawing.Point(174, 14);
+            this.buttonTurnNeg.Location = new System.Drawing.Point(132, 14);
             this.buttonTurnNeg.Name = "buttonTurnNeg";
             this.buttonTurnNeg.Size = new System.Drawing.Size(35, 24);
             this.buttonTurnNeg.TabIndex = 22;
@@ -59,7 +60,7 @@ namespace RobotView
             0,
             0,
             0});
-            this.upDownTurnAngle.Location = new System.Drawing.Point(215, 14);
+            this.upDownTurnAngle.Location = new System.Drawing.Point(173, 14);
             this.upDownTurnAngle.Maximum = new decimal(new int[] {
             360,
             0,
@@ -95,10 +96,20 @@ namespace RobotView
             this.label12.Size = new System.Drawing.Size(123, 20);
             this.label12.Text = "Angle (+/- degrees)";
             // 
+            // btn_length_edit
+            // 
+            this.btn_length_edit.Location = new System.Drawing.Point(254, 14);
+            this.btn_length_edit.Name = "btn_length_edit";
+            this.btn_length_edit.Size = new System.Drawing.Size(36, 24);
+            this.btn_length_edit.TabIndex = 34;
+            this.btn_length_edit.Text = "Edit";
+            this.btn_length_edit.Click += new System.EventHandler(this.btn_length_edit_Click);
+            // 
             // RunTurn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.Controls.Add(this.btn_length_edit);
             this.Controls.Add(this.buttonTurnStart);
             this.Controls.Add(this.buttonTurnNeg);
             this.Controls.Add(this.upDownTurnAngle);
@@ -117,5 +128,6 @@ namespace RobotView
         private System.Windows.Forms.NumericUpDown upDownTurnAngle;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button btn_length_edit;
     }
 }

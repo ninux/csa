@@ -51,7 +51,7 @@ namespace RobotView
         }
         #endregion
 
-        private void btn_radius_edit_Click(object sender, EventArgs e)
+        private void btn_length_edit_Click(object sender, EventArgs e)
         {
             NumericKeyboard nk = new NumericKeyboard();
             if (nk.ShowDialog() == DialogResult.OK)
@@ -59,6 +59,5 @@ namespace RobotView
                 // ???
             }
         }
-
     }
 }

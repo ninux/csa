@@ -21,12 +21,13 @@ namespace RobotView
             res = acc;
         }
 
-        public MicorCPU(int initial)
+        public MicroCPU(int initial)
         {
             // init with given value
             acc = initial;
             res = acc;
         }
+        #endregion
 
         #region properties
         public int Result

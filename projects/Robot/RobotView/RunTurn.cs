@@ -42,6 +42,12 @@ namespace RobotView
         {
             buttonTurnStart_Click(null, EventArgs.Empty);
         }
+
         #endregion
+
+        private void btn_length_edit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
