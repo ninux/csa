@@ -27,8 +27,12 @@ namespace TestDrive
             robot.Drive.Power = true;   // Stromversorgung der Motoren (im DriveCtrl) einschalten
 
             driveView1.Drive = robot.Drive; // DriveView benötigt Drive-Objekt zur Visualisierung
-            //radarView1.Radar = robot.Radar;
+            radarView1.Radar = robot.Radar;
             consoleView1.RobotConsole = robot.RobotConsole;
+
+            runLine1.Drive = robot.Drive;
+            runArc1.Drive = robot.Drive;
+            runTurn1.Drive = robot.Drive;
 
             commonRunParameters1.AccelerationChanged += AccelerationChanged;
             commonRunParameters1.SpeedChanged += SpeedChanged;
@@ -41,9 +45,15 @@ namespace TestDrive
         #region methods
         private void SpeedChanged(object sender, EventArgs e)
         {
+            runLine1.Speed = commonRunParameters1.Speed;
+            runArc1.Speed = commonRunParameters1.Speed;
+            runTurn1.Speed = commonRunParameters1.Speed;
         }
         private void AccelerationChanged(object sender, EventArgs e)
         {
+            runLine1.Acceleration = commonRunParameters1.Acceleration;
+            runArc1.Acceleration = commonRunParameters1.Acceleration;
+            runTurn1.Acceleration = commonRunParameters1.Acceleration;
         }
 
 
@@ -58,14 +68,9 @@ namespace TestDrive
         }
         #endregion
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
-
-        }
-
-        private void commonRunParameters1_Click(object sender, EventArgs e)
-        {
-
+            if (robot.Radar.Distance < 0.3f) robot.Drive.Stop();
         }
     }
 }

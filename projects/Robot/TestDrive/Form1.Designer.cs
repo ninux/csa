@@ -33,12 +33,14 @@ namespace TestDrive
         {
             this.buttonHalt = new System.Windows.Forms.Button();
             this.driveView1 = new RobotView.DriveView();
+            this.radarView1 = new RobotView.RadarView();
             this.consoleView1 = new RobotView.ConsoleView();
             this.buttonStop = new System.Windows.Forms.Button();
             this.commonRunParameters1 = new RobotView.CommonRunParameters();
             this.runLine1 = new RobotView.RunLine();
             this.runTurn1 = new RobotView.RunTurn();
             this.runArc1 = new RobotView.RunArc();
+            this.timer1 = new System.Windows.Forms.Timer();
             this.SuspendLayout();
             // 
             // buttonHalt
@@ -56,6 +58,14 @@ namespace TestDrive
             this.driveView1.Name = "driveView1";
             this.driveView1.Size = new System.Drawing.Size(292, 315);
             this.driveView1.TabIndex = 1;
+            // 
+            // radarView1
+            // 
+            this.radarView1.Location = new System.Drawing.Point(387, 335);
+            this.radarView1.Name = "radarView1";
+            this.radarView1.Radar = null;
+            this.radarView1.Size = new System.Drawing.Size(269, 42);
+            this.radarView1.TabIndex = 4;
             // 
             // consoleView1
             // 
@@ -83,7 +93,6 @@ namespace TestDrive
             this.commonRunParameters1.Size = new System.Drawing.Size(351, 84);
             this.commonRunParameters1.Speed = 0.5F;
             this.commonRunParameters1.TabIndex = 4;
-            this.commonRunParameters1.Click += new System.EventHandler(this.commonRunParameters1_Click);
             // 
             // runLine1
             // 
@@ -119,6 +128,11 @@ namespace TestDrive
             this.runArc1.Speed = 0F;
             this.runArc1.TabIndex = 7;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -128,6 +142,7 @@ namespace TestDrive
             this.Controls.Add(this.buttonStop);
             this.Controls.Add(this.buttonHalt);
             this.Controls.Add(this.driveView1);
+            this.Controls.Add(this.radarView1);
             this.Controls.Add(this.consoleView1);
             this.Controls.Add(this.commonRunParameters1);
             this.Controls.Add(this.runLine1);
@@ -135,7 +150,6 @@ namespace TestDrive
             this.Controls.Add(this.runArc1);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }
@@ -144,11 +158,13 @@ namespace TestDrive
 
         private System.Windows.Forms.Button buttonHalt;
         private DriveView driveView1;
+        private RadarView radarView1;
         private ConsoleView consoleView1;
         private CommonRunParameters commonRunParameters1;
         private RunLine runLine1;
         private RunTurn runTurn1;
         private RunArc runArc1;
         private System.Windows.Forms.Button buttonStop;
+        private System.Windows.Forms.Timer timer1;
     }
 }
