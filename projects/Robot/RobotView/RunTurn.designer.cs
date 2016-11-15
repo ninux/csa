@@ -79,7 +79,7 @@ namespace RobotView
             0,
             0,
             0});
-            this.upDownTurnAngle.ValueChanged += new System.EventHandler(this.upDownTurnAngle_ValueChanged);
+            //this.upDownTurnAngle.ValueChanged += new System.EventHandler(this.upDownTurnAngle_ValueChanged);
             // 
             // label6
             // 

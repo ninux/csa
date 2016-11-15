@@ -100,6 +100,7 @@ namespace RobotView
             0,
             0,
             0});
+            this.upDownArcAngle.ValueChanged += new System.EventHandler(this.upDownArcAngle_ValueChanged);
             // 
             // arcLeftRadioButton
             // 

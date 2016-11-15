@@ -75,5 +75,10 @@ namespace RobotView
                 upDownArcAngle.Text = nk.Number.ToString();
             }
         }
+
+        private void upDownArcAngle_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

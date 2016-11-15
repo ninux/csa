@@ -108,19 +108,21 @@ namespace RobotView
 
         private void btn_speed_edit_Click(object sender, EventArgs e)
         {
-            NumericKeyboard nk = new NumericKeyboard((int)Speed);
+            NumericKeyboard nk = new NumericKeyboard(
+                Int32.Parse(upDownSpeed.Text));
             if (nk.ShowDialog() == DialogResult.OK)
             {
-                Speed = nk.Number;
+                upDownSpeed.Text = nk.Number.ToString();
             }
         }
 
         private void btn_acceleration_edit_Click(object sender, EventArgs e)
         {
-            NumericKeyboard nk = new NumericKeyboard((int)Acceleration);
+            NumericKeyboard nk = new NumericKeyboard(
+                Int32.Parse(upDownAcceleration.Text));
             if (nk.ShowDialog() == DialogResult.OK)
             {
-                Acceleration = nk.Number;
+                upDownAcceleration.Text = nk.Number.ToString();
             }
         }
         #endregion

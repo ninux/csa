@@ -53,10 +53,11 @@ namespace RobotView
 
         private void btn_length_edit_Click(object sender, EventArgs e)
         {
-            NumericKeyboard nk = new NumericKeyboard();
+            NumericKeyboard nk = new NumericKeyboard(
+                Int32.Parse(upDownLineLength.Text));
             if (nk.ShowDialog() == DialogResult.OK)
             {
-                // ???
+                upDownLineLength.Text = nk.Number.ToString();
             }
         }
     }

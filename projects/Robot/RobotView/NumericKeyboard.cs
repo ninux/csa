@@ -12,27 +12,33 @@ namespace RobotView
     public partial class NumericKeyboard : Form
     {
         #region members
-        MicroCPU cpu;
+        private MicroCPU cpu;
+        private int number;
         #endregion
 
         #region constructor & destructor
         public NumericKeyboard()
         {
             InitializeComponent();
-            cpu = new MicroCPU();
+            // cpu = new MicroCPU();
+            number = 0;
+            tb_nk_number.Text = number.ToString();
         }
 
         public NumericKeyboard(int initial)
         {
             InitializeComponent();
-            cpu = new MicroCPU();
+            // cpu = new MicroCPU(initial);
+            number = initial;
+            tb_nk_number.Text = number.ToString();
         }
         #endregion
 
         #region properties
         public int Number
         {
-            get { return cpu.Result; }
+            get { return number; }
+            set { number = value; }
         }
         #endregion
 
@@ -239,6 +245,7 @@ namespace RobotView
         private void btn_nk_ok_Click(object sender, EventArgs e)
         {
             // send parameter value
+            Number = Int32.Parse(tb_nk_number.Text);
             // exit
         }
 
