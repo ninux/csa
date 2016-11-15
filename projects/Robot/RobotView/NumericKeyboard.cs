@@ -54,7 +54,7 @@ namespace RobotView
             }
             else
             {
-                tb_nk_number.Text += btn_nk_zero;
+                tb_nk_number.Text += btn_nk_zero.Text;
             }
         }
 
@@ -66,7 +66,7 @@ namespace RobotView
             }
             else
             {
-                tb_nk_number.Text += btn_nk_one;
+                tb_nk_number.Text += btn_nk_one.Text;
             }
         }
 
@@ -78,7 +78,7 @@ namespace RobotView
             }
             else
             {
-                tb_nk_number.Text += btn_nk_two;
+                tb_nk_number.Text += btn_nk_two.Text;
             }
         }
 
@@ -90,7 +90,7 @@ namespace RobotView
             }
             else
             {
-                tb_nk_number.Text += btn_nk_three;
+                tb_nk_number.Text += btn_nk_three.Text;
             }
         }
 
@@ -102,7 +102,7 @@ namespace RobotView
             }
             else
             {
-                tb_nk_number.Text += btn_nk_four;
+                tb_nk_number.Text += btn_nk_four.Text;
             }
         }
 
@@ -114,7 +114,7 @@ namespace RobotView
             }
             else
             {
-                tb_nk_number.Text += btn_nk_five;
+                tb_nk_number.Text += btn_nk_five.Text;
             }
         }
 
@@ -126,7 +126,7 @@ namespace RobotView
             }
             else
             {
-                tb_nk_number.Text += btn_nk_six;
+                tb_nk_number.Text += btn_nk_six.Text;
             }
         }
 
@@ -138,7 +138,7 @@ namespace RobotView
             }
             else
             {
-                tb_nk_number.Text += btn_nk_seven;
+                tb_nk_number.Text += btn_nk_seven.Text;
             }
         }
 
@@ -150,7 +150,7 @@ namespace RobotView
             }
             else
             {
-                tb_nk_number.Text += btn_nk_eight;
+                tb_nk_number.Text += btn_nk_eight.Text;
             }
         }
 
@@ -162,13 +162,14 @@ namespace RobotView
             }
             else
             {
-                tb_nk_number.Text += btn_nk_nine;
+                tb_nk_number.Text += btn_nk_nine.Text;
             }
         }
 
         private void btn_nk_dot_Click(object sender, EventArgs e)
         {
-            tb_nk_number.Text += btn_nk_dot;
+            // NOT IMPLEMENTED YET - TODO
+            //tb_nk_number.Text += btn_nk_dot.Text;
         }
 
         private void btn_nk_add_one_Click(object sender, EventArgs e)
