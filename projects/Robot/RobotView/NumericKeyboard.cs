@@ -48,7 +48,7 @@ namespace RobotView
 
         private void btn_nk_zero_Click(object sender, EventArgs e)
         {
-            if (tb_nk_number.Equals("0"))
+            if (tb_nk_number.Text.Equals("0"))
             {
                 tb_nk_number.Text = btn_nk_zero.Text;
             }
@@ -60,7 +60,7 @@ namespace RobotView
 
         private void btn_nk_one_Click(object sender, EventArgs e)
         {
-            if (tb_nk_number.Equals("0"))
+            if (tb_nk_number.Text.Equals("0"))
             {
                 tb_nk_number.Text = btn_nk_one.Text;
             }
@@ -72,7 +72,7 @@ namespace RobotView
 
         private void btn_nk_two_Click(object sender, EventArgs e)
         {
-            if (tb_nk_number.Equals("0"))
+            if (tb_nk_number.Text.Equals("0"))
             {
                 tb_nk_number.Text = btn_nk_two.Text;
             }
@@ -84,7 +84,7 @@ namespace RobotView
 
         private void btn_nk_three_Click(object sender, EventArgs e)
         {
-            if (tb_nk_number.Equals("0"))
+            if (tb_nk_number.Text.Equals("0"))
             {
                 tb_nk_number.Text = btn_nk_three.Text;
             }
@@ -96,7 +96,7 @@ namespace RobotView
 
         private void btn_nk_four_Click(object sender, EventArgs e)
         {
-            if (tb_nk_number.Equals("0"))
+            if (tb_nk_number.Text.Equals("0"))
             {
                 tb_nk_number.Text = btn_nk_four.Text;
             }
@@ -108,7 +108,7 @@ namespace RobotView
 
         private void btn_nk_five_Click(object sender, EventArgs e)
         {
-            if (tb_nk_number.Equals("0"))
+            if (tb_nk_number.Text.Equals("0"))
             {
                 tb_nk_number.Text = btn_nk_five.Text;
             }
@@ -120,7 +120,7 @@ namespace RobotView
 
         private void btn_nk_six_Click(object sender, EventArgs e)
         {
-            if (tb_nk_number.Equals("0"))
+            if (tb_nk_number.Text.Equals("0"))
             {
                 tb_nk_number.Text = btn_nk_six.Text;
             }
@@ -132,7 +132,7 @@ namespace RobotView
 
         private void btn_nk_seven_Click(object sender, EventArgs e)
         {
-            if (tb_nk_number.Equals("0"))
+            if (tb_nk_number.Text.Equals("0"))
             {
                 tb_nk_number.Text = btn_nk_seven.Text;
             }
@@ -144,7 +144,7 @@ namespace RobotView
 
         private void btn_nk_eight_Click(object sender, EventArgs e)
         {
-            if (tb_nk_number.Equals("0"))
+            if (tb_nk_number.Text.Equals("0"))
             {
                 tb_nk_number.Text = btn_nk_eight.Text;
             }
@@ -156,7 +156,7 @@ namespace RobotView
 
         private void btn_nk_nine_Click(object sender, EventArgs e)
         {
-            if (tb_nk_number.Equals("0"))
+            if (tb_nk_number.Text.Equals("0"))
             {
                 tb_nk_number.Text = btn_nk_nine.Text;
             }
@@ -222,7 +222,7 @@ namespace RobotView
             }
             else
             {
-                tb_nk_number.Text.Remove(tb_nk_number.Text.Length - 1, 1);
+                tb_nk_number.Text = tb_nk_number.Text.Remove(tb_nk_number.Text.Length -1, 1);
             }
         }
 
