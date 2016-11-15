@@ -37,16 +37,16 @@ namespace RobotView
             // 
             // buttonLineStart
             // 
-            this.buttonLineStart.Location = new System.Drawing.Point(296, 15);
+            this.buttonLineStart.Location = new System.Drawing.Point(312, 15);
             this.buttonLineStart.Name = "buttonLineStart";
-            this.buttonLineStart.Size = new System.Drawing.Size(51, 24);
+            this.buttonLineStart.Size = new System.Drawing.Size(36, 24);
             this.buttonLineStart.TabIndex = 18;
             this.buttonLineStart.Text = "Start";
             this.buttonLineStart.Click += new System.EventHandler(this.buttonLineStart_Click);
             // 
             // buttonLineNeg
             // 
-            this.buttonLineNeg.Location = new System.Drawing.Point(132, 15);
+            this.buttonLineNeg.Location = new System.Drawing.Point(148, 15);
             this.buttonLineNeg.Name = "buttonLineNeg";
             this.buttonLineNeg.Size = new System.Drawing.Size(35, 24);
             this.buttonLineNeg.TabIndex = 19;
@@ -60,7 +60,7 @@ namespace RobotView
             0,
             0,
             0});
-            this.upDownLineLength.Location = new System.Drawing.Point(173, 15);
+            this.upDownLineLength.Location = new System.Drawing.Point(189, 15);
             this.upDownLineLength.Maximum = new decimal(new int[] {
             50000,
             0,
@@ -98,7 +98,7 @@ namespace RobotView
             // 
             // btn_length_edit
             // 
-            this.btn_length_edit.Location = new System.Drawing.Point(254, 15);
+            this.btn_length_edit.Location = new System.Drawing.Point(270, 15);
             this.btn_length_edit.Name = "btn_length_edit";
             this.btn_length_edit.Size = new System.Drawing.Size(36, 24);
             this.btn_length_edit.TabIndex = 33;

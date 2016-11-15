@@ -37,16 +37,16 @@ namespace RobotView
             // 
             // buttonTurnStart
             // 
-            this.buttonTurnStart.Location = new System.Drawing.Point(296, 14);
+            this.buttonTurnStart.Location = new System.Drawing.Point(314, 14);
             this.buttonTurnStart.Name = "buttonTurnStart";
-            this.buttonTurnStart.Size = new System.Drawing.Size(51, 24);
+            this.buttonTurnStart.Size = new System.Drawing.Size(36, 24);
             this.buttonTurnStart.TabIndex = 21;
             this.buttonTurnStart.Text = "Start";
             this.buttonTurnStart.Click += new System.EventHandler(this.buttonTurnStart_Click);
             // 
             // buttonTurnNeg
             // 
-            this.buttonTurnNeg.Location = new System.Drawing.Point(132, 14);
+            this.buttonTurnNeg.Location = new System.Drawing.Point(150, 14);
             this.buttonTurnNeg.Name = "buttonTurnNeg";
             this.buttonTurnNeg.Size = new System.Drawing.Size(35, 24);
             this.buttonTurnNeg.TabIndex = 22;
@@ -60,7 +60,7 @@ namespace RobotView
             0,
             0,
             0});
-            this.upDownTurnAngle.Location = new System.Drawing.Point(173, 14);
+            this.upDownTurnAngle.Location = new System.Drawing.Point(191, 14);
             this.upDownTurnAngle.Maximum = new decimal(new int[] {
             360,
             0,
@@ -98,7 +98,7 @@ namespace RobotView
             // 
             // btn_length_edit
             // 
-            this.btn_length_edit.Location = new System.Drawing.Point(254, 14);
+            this.btn_length_edit.Location = new System.Drawing.Point(272, 14);
             this.btn_length_edit.Name = "btn_length_edit";
             this.btn_length_edit.Size = new System.Drawing.Size(36, 24);
             this.btn_length_edit.TabIndex = 34;

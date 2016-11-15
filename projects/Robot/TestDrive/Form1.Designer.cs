@@ -104,7 +104,7 @@ namespace TestDrive
             this.runTurn1.Drive = null;
             this.runTurn1.Location = new System.Drawing.Point(350, 145);
             this.runTurn1.Name = "runTurn1";
-            this.runTurn1.Size = new System.Drawing.Size(351, 84);
+            this.runTurn1.Size = new System.Drawing.Size(351, 48);
             this.runTurn1.Speed = 0F;
             this.runTurn1.TabIndex = 6;
             // 
@@ -113,7 +113,7 @@ namespace TestDrive
             this.runArc1.Acceleration = 0F;
             this.runArc1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.runArc1.Drive = null;
-            this.runArc1.Location = new System.Drawing.Point(350, 237);
+            this.runArc1.Location = new System.Drawing.Point(350, 199);
             this.runArc1.Name = "runArc1";
             this.runArc1.Size = new System.Drawing.Size(351, 94);
             this.runArc1.Speed = 0F;
@@ -124,7 +124,7 @@ namespace TestDrive
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(798, 435);
+            this.ClientSize = new System.Drawing.Size(705, 435);
             this.Controls.Add(this.buttonStop);
             this.Controls.Add(this.buttonHalt);
             this.Controls.Add(this.driveView1);
