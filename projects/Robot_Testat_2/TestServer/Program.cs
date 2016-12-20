@@ -10,6 +10,7 @@ namespace TestServer
         {
             DriveServer driveServer1 = new DriveServer();
             //Console.WriteLine("Welcome to C# on Windows Embedded Systems");
+            //SimpleHttpServer SimpleHttpServer = new SimpleHttpServer();
         }
     }
 }

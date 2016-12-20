@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Net;
+using System.Threading;
 
 namespace TestServer
 {
@@ -29,9 +30,9 @@ namespace TestServer
             acceleration = 0.3F;
 
             // Server starten
-            IPAddress ipAddress = Dns.GetHostEntry("localhost").AddressList[0];
-            //TcpListener listen = new TcpListener(IPAddress.Any, 80);
-            TcpListener listen = new TcpListener(ipAddress, 80);
+            //IPAddress ipAddress = Dns.GetHostEntry("localhost").AddressList[0];
+            TcpListener listen = new TcpListener(IPAddress.Any, 8080);
+            //TcpListener listen = new TcpListener(ipAddress, 80);
             listen.Start();
             while (true)
             {
@@ -50,13 +51,15 @@ namespace TestServer
             string line;
             StreamReader sr = new StreamReader(client.GetStream());
             //StreamWriter sw = new StreamWriter(client.GetStream());
-            StreamWriter sw_file = new StreamWriter(@"\Drive.txt");
+            StreamWriter sw_file = new StreamWriter("Drive.txt");
             Console.WriteLine("Verbindung zu " + client.Client.RemoteEndPoint);
             // Datei zeilenweise lesen und lokal schreiben
             while ((line = sr.ReadLine()) != "Start")
             {
                 sw_file.WriteLine(line);
+                Console.WriteLine("WriteLine: " + line);
             }
+            sw_file.Close();
 
 
             // Datei im HTTP-Format senden
@@ -69,45 +72,51 @@ namespace TestServer
         public void StartDrive()
         {
             string line;
-            StreamReader sr = new StreamReader(@"\Drive.txt");
+            StreamReader sr = new StreamReader("Drive.txt");
             // Datei zeilenweise lesen und abarbeiten
             while ((line = sr.ReadLine()) != null)
             {
                 // extract text and values
                 string command = line.Split(' ')[0];
-                string value1 = line.Split(' ')[1];
-                string value2 = line.Split(' ')[2];
 
                 float length;
                 int angle;
                 float radius;
 
+                while (!robot1.Drive.Done) { };
+
                 switch (command)
                 {
                     case "TrackLine":
-                        length = (float)Convert.ToDouble(value1);
+                        length = (float)Convert.ToDouble(line.Split(' ')[1]);
                         robot1.Drive.RunLine(length, speed, acceleration);
+                        Console.WriteLine("DBG TrackLine " + length);
                         break;
                     case "TrackTurnLeft":
-                        angle = (int)Convert.ToInt16(value1);
+                        angle = (int)Convert.ToInt16(line.Split(' ')[1]);
                         robot1.Drive.RunTurn(-angle, speed, acceleration);
+                        Console.WriteLine("DBG TrackTurnLeft " + angle);
                         break;
                     case "TrackTurnRight":
-                        angle = (int)Convert.ToInt16(value1);
+                        angle = (int)Convert.ToInt16(line.Split(' ')[1]);
                         robot1.Drive.RunTurn(angle, speed, acceleration);
+                        Console.WriteLine("DBG TrackTurnRight " + angle);
                         break;
                     case "TrackArcLeft":
-                        angle = (int)Convert.ToInt16(value1);
-                        radius = (float)Convert.ToDouble(value2);
+                        angle = (int)Convert.ToInt16(line.Split(' ')[1]);
+                        radius = (float)Convert.ToDouble(line.Split(' ')[2]);
                         robot1.Drive.RunArcLeft(radius, angle, speed, acceleration);
+                        Console.WriteLine("DBG TrackArcLeft " + angle + " " + radius);
                         break;
                     case "TrackArcRight":
-                        angle = (int)Convert.ToInt16(value1);
-                        radius = (float)Convert.ToDouble(value2);
+                        angle = (int)Convert.ToInt16(line.Split(' ')[1]);
+                        radius = (float)Convert.ToDouble(line.Split(' ')[2]);
                         robot1.Drive.RunArcRight(radius, angle, speed, acceleration);
+                        Console.WriteLine("DBG TrackArcRight " + angle + " " + radius);
                         break;
                 }
             }
+            sr.Close();
         }
     }
 }
